@@ -8,7 +8,7 @@ memeForm.addEventListener('submit', async (e) => {
     const displayDiv = document.getElementById("displayMeme")
 
     try{
-        const res = await fetch(`/api/meme?template=${encodeURIComponent(template)}&top=${encodeURIComponent(topText)}&bottom=${encodeURIComponent(bottomText)}`)
+        const res = await fetch(`/.netlify/functions/api?template=${encodeURIComponent(template)}&top=${encodeURIComponent(topText)}&bottom=${encodeURIComponent(bottomText)}`)
         const data = await res.json()
 
         if(res.ok && data.url){
