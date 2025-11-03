@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme generator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="meme-form-container">
+        <h2>Meme Generator!</h2>
+        <h3>Customize meme with your own text and templates!</h3>
+    <form class="p-4 border" id="meme-form">
+        <div class="form-group">
+          <label for="topText">Top Text</label>
+          <input type="text" class="form-control" id="topText" placeholder="Enter top text" aria-label="Top text for meme">
+        </div>
+      
+        <div class="form-group">
+          <label for="bottomText">Bottom Text</label>
+          <input type="text" class="form-control" id="bottomText" placeholder="Enter bottom text" aria-label="Bottom text for meme">
+        </div>
+      
+        <div class="form-group">
+          <label for="template">Template</label>
+          <select id="template" class="form-control" aria-label="Select meme template">
+            <option value="random">Random</option>
+            <option value="doge">Doge</option>
+            <option value="drake">Drake</option>
+          </select>
+        </div>
+      
+        <button type="submit" class="btn btn-primary btn-block" id="getMemeBtn" aria-label="Get meme button">Get Meme</button>
+      </form>
+</div>
+    <div id="displayMeme" aria-label="Meme display area"></div>
+    <script src="js/script.js"></script>
+</body>
+</html>
