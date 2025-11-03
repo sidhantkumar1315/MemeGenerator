@@ -2,8 +2,9 @@ const express = require("express");
 const serverless = require("serverless-http");
 
 const app = express();
+const router = express.Router();
 
-app.get("/", (req, res) => {
+router.get("/", (req, res) => {
   try {
     const top = encodeURIComponent(req.query.top || "This is top Text!");
     const bottom = encodeURIComponent(req.query.bottom || "This is bottom Text!");
@@ -22,5 +23,7 @@ app.get("/", (req, res) => {
     res.status(500).json({ error: "Server error" });
   }
 });
+
+app.use("/.netlify/functions/api", router);
 
 module.exports.handler = serverless(app);
