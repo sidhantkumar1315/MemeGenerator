@@ -3,7 +3,7 @@ const serverless = require("serverless-http");
 
 const app = express();
 
-app.get("/api/meme", (req, res) => {
+app.get("/", (req, res) => {
   try {
     const top = encodeURIComponent(req.query.top || "This is top Text!");
     const bottom = encodeURIComponent(req.query.bottom || "This is bottom Text!");
